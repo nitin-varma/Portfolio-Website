@@ -50,6 +50,12 @@ export default function Navbar() {
           >
             Projects
           </Link>
+          <Link
+            href="#articles"
+            className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
+          >
+            Articles
+          </Link>
           <Link href="#contact" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
             Contact
           </Link>
@@ -100,6 +106,13 @@ export default function Navbar() {
               Projects
             </Link>
             <Link
+              href="#articles"
+              className="text-sm font-medium hover:text-primary py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Articles
+            </Link>
+            <Link
               href="#contact"
               className="text-sm font-medium hover:text-primary py-2"
               onClick={() => setIsMenuOpen(false)}
@@ -112,4 +125,3 @@ export default function Navbar() {
     </header>
   )
 }
-

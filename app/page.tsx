@@ -4,6 +4,7 @@ import ProjectsSection from "@/components/projects-section"
 import SkillsSection from "@/components/skills-section"
 import ExperienceSection from "@/components/experience-section"
 import EducationSection from "@/components/education-section"
+import ArticlesSection from "@/components/articles-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
 import NetworkAnimation from "@/components/network-animation"
@@ -20,6 +21,7 @@ export default function Home() {
           <ExperienceSection />
           <EducationSection />
           <ProjectsSection />
+          <ArticlesSection />
           <ContactSection />
         </main>
         <Footer />
@@ -27,4 +29,3 @@ export default function Home() {
     </div>
   )
 }
-

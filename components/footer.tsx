@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail, BookOpen } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -14,7 +14,7 @@ export default function Footer() {
 
           <div className="flex items-center space-x-4">
             <Link
-              href="https://github.com/yourusername"
+              href="https://github.com/nitin-varma"
               target="_blank"
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="GitHub"
@@ -22,12 +22,20 @@ export default function Footer() {
               <Github className="h-5 w-5" />
             </Link>
             <Link
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/nitin-varma-indukuri/"
               target="_blank"
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-5 w-5" />
+            </Link>
+            <Link
+              href="https://medium.com/@nitinvarma9515"
+              target="_blank"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Medium"
+            >
+              <BookOpen className="h-5 w-5" />
             </Link>
             <Link
               href="mailto:nitinvarma9515@gmail.com"
@@ -42,4 +50,3 @@ export default function Footer() {
     </footer>
   )
 }
-

@@ -107,4 +107,3 @@ export default function NetworkAnimation() {
 
   return <canvas ref={canvasRef} className="network-animation" />
 }
-

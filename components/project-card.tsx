@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github } from "lucide-react"
+import { Github } from "lucide-react"
 import Link from "next/link"
 
 interface ProjectCardProps {
@@ -9,23 +9,15 @@ interface ProjectCardProps {
   description: string
   technologies: string[]
   image: string
-  demoLink?: string
   githubLink?: string
 }
 
-export default function ProjectCard({
-  title,
-  description,
-  technologies,
-  image,
-  demoLink,
-  githubLink,
-}: ProjectCardProps) {
+export default function ProjectCard({ title, description, technologies, image, githubLink }: ProjectCardProps) {
   return (
     <Card className="overflow-hidden flex flex-col h-full bg-secondary/50 border-secondary hover:border-primary/50 transition-colors">
-      <div className="aspect-video overflow-hidden">
+      <div className="aspect-video overflow-hidden relative">
         <img
-          src={image || "/placeholder.svg"}
+          src={image || "/placeholder.svg?height=400&width=600"}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         />
@@ -48,8 +40,8 @@ export default function ProjectCard({
       <CardContent className="flex-grow">
         <CardDescription className="text-base line-clamp-4 text-foreground/70">{description}</CardDescription>
       </CardContent>
-      <CardFooter className="flex gap-2">
-        {githubLink && (
+      {githubLink && (
+        <CardFooter className="flex gap-2">
           <Button
             variant="outline"
             size="sm"
@@ -60,16 +52,8 @@ export default function ProjectCard({
               <Github className="mr-2 h-4 w-4" /> Code
             </Link>
           </Button>
-        )}
-        {demoLink && (
-          <Button size="sm" asChild className="bg-primary/10 text-primary hover:bg-primary/20">
-            <Link href={demoLink} target="_blank">
-              <ExternalLink className="mr-2 h-4 w-4" /> Demo
-            </Link>
-          </Button>
-        )}
-      </CardFooter>
+        </CardFooter>
+      )}
     </Card>
   )
 }
-

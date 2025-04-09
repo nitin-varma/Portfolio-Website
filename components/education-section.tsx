@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
 
 export default function EducationSection() {
   return (
@@ -13,20 +14,16 @@ export default function EducationSection() {
         <div className="max-w-3xl mx-auto space-y-6">
           <Card className="bg-secondary/50 border-secondary">
             <CardHeader>
-              <div className="flex justify-between items-start">
+              <div className="flex justify-between items-center">
                 <div className="flex gap-4 items-center">
                   <div className="w-16 h-16 bg-background/40 rounded-md flex items-center justify-center overflow-hidden">
-                    {/* Replace with actual Northeastern University logo */}
-                    <div className="text-xs text-center text-muted-foreground p-1">Add Northeastern logo</div>
-                    {/* Once you have the logo, uncomment this:
-                    <Image 
-                      src="/northeastern-logo.png" 
-                      alt="Northeastern University" 
-                      width={64} 
-                      height={64} 
-                      className="object-contain" 
+                    <Image
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Northeastern%20University-tsG0tdMVWlsDzAkDLkVEaloYkxQkaB.png"
+                      alt="Northeastern University"
+                      width={64}
+                      height={64}
+                      className="object-contain"
                     />
-                    */}
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-foreground">Northeastern University</h3>
@@ -50,20 +47,16 @@ export default function EducationSection() {
 
           <Card className="bg-secondary/50 border-secondary">
             <CardHeader>
-              <div className="flex justify-between items-start">
+              <div className="flex justify-between items-center">
                 <div className="flex gap-4 items-center">
                   <div className="w-16 h-16 bg-background/40 rounded-md flex items-center justify-center overflow-hidden">
-                    {/* Replace with actual JNTU logo */}
-                    <div className="text-xs text-center text-muted-foreground p-1">Add JNTU logo</div>
-                    {/* Once you have the logo, uncomment this:
-                    <Image 
-                      src="/jntu-logo.png" 
-                      alt="Jawaharlal Nehru Technological University" 
-                      width={64} 
-                      height={64} 
-                      className="object-contain" 
+                    <Image
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jawaharlal%20Nehru%20Technological%20Institute.jpg-0rejNRtJEtMHmZbW4tw1nNyoTEl8Ne.jpeg"
+                      alt="Jawaharlal Nehru Technological University"
+                      width={64}
+                      height={64}
+                      className="object-contain"
                     />
-                    */}
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-foreground">Jawaharlal Nehru Technological University</h3>
@@ -88,4 +81,3 @@ export default function EducationSection() {
     </section>
   )
 }
-
